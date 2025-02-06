@@ -37,11 +37,16 @@ label {
 }
 
 input, select, button {
-  width: 100%;
+  width: 100%; /* Larghezza predefinita */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
+}
+
+/* Riduzione della larghezza del campo importo */
+#amount {
+  width: 150px; /* Allinea alla larghezza del menu a tendina */
 }
 
 button {
@@ -77,5 +82,10 @@ button:hover {
 
   input, select, button {
     font-size: 0.9rem;
+  }
+
+  /* Mantieni la larghezza ridotta anche su schermi piccoli */
+  #amount {
+    width: 120px; /* Larghezza ridotta per dispositivi mobili */
   }
 }
