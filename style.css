@@ -1,3 +1,4 @@
+/* Stile generale */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,7 +6,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f4f4f9;
 }
 
@@ -14,7 +15,8 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 90%;
+  max-width: 400px;
   text-align: center;
 }
 
@@ -23,38 +25,57 @@ h1 {
   margin-bottom: 20px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 label {
-  margin-top: 10px;
   font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
 }
 
 input, select, button {
-  margin-top: 5px;
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 1rem;
 }
 
 button {
   background-color: #007bff;
   color: white;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-#results {
+.results {
   margin-top: 20px;
+  display: none;
 }
 
-#results p {
+.results p {
   font-size: 1rem;
   margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .input-group label {
+    font-size: 0.9rem;
+  }
+
+  input, select, button {
+    font-size: 0.9rem;
+  }
 }
